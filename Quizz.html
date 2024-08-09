@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre Irati</title>
+    <link rel="stylesheet" href="Css/Quizz.css">
+    <link rel="stylesheet" href="Css/BotaoVoltar.css"
+</head>
+<body>
+    <h1><a class="link" href="Início.html"> <img class="ImgFlecha" src="Img/Flecha-voltar.png" alt="">Voltar</a></h1>
+    <div class="quiz-container">
+        <h1>Quiz sobre Irati</h1>
+        <form id="quizForm">
+            <div class="question">
+                <h2>1. Irati é uma cidade com bastante agricultura envolvida, Irati é a cidade da?</h2>
+                <ul class="options">
+                    <li><label><input type="radio" name="question1" value="a"> a) Batata</label></li>
+                    <li><label><input type="radio" name="question1" value="b"> b) Trigo</label></li>
+                    <li><label><input type="radio" name="question1" value="c"> c) Cenoura</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <h2>2. Como Irati foi criada?</h2>
+                <ul class="options">
+                    <li><label><input type="radio" name="question2" value="a"> a) Pelos Portugueses</label></li>
+                    <li><label><input type="radio" name="question2" value="b"> b) Pela grande imigração de poloneses e ucranianos</label></li>
+                    <li><label><input type="radio" name="question2" value="c"> c) Pelos indígenas</label></li>
+                </ul>
+            </div>
+            <div class="question">
+                <h2>3. Quando começou a mecanização de Irati?</h2>
+                <ul class="options">
+                    <li><label><input type="radio" name="question3" value="a"> a) Década de 1950</label></li>
+                    <li><label><input type="radio" name="question3" value="b"> b) Início do século XX</label></li>
+                    <li><label><input type="radio" name="question3" value="c"> c) Épocas atuais</label></li>
+                </ul>
+            </div>
+            <button type="button" class="submit-btn" onclick="checkAnswers()">Enviar</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                question1: 'a',
+                question2: 'b',
+                question3: 'a'
+            };
+            
+            let score = 0;
+            const form = document.forms['quizForm'];
+            const resultDiv = document.getElementById('result');
+
+            for (let question in answers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === answers[question]) {
+                    score++;
+                }
+            }
+
+            const totalQuestions = Object.keys(answers).length;
+            resultDiv.textContent = `Você acertou ${score} de ${totalQuestions} perguntas.`;
+        }
+    </script>
+</body>
+</html>
+

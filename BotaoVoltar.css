@@ -1,0 +1,21 @@
+
+.link{
+	text-decoration: none;
+	color: black;
+	padding: 5px 7px 5px 5px;
+
+}
+
+.link:hover{
+	color: #FFFFFF;
+	background-color: #5287f3;
+	border-radius: 7px;
+	transition-duration: 0.6s;
+	text-decoration: none;
+}
+
+
+.ImgFlecha{
+	width: 40px;
+	height: 20px;
+}

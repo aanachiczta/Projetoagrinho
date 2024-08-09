@@ -1,0 +1,38 @@
+nav li{
+	display: inline;
+	margin:0 0 0 30px;
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+}
+
+nav a{
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 30px;
+	text-decoration: none;	
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+}
+
+nav{
+	position: absolute;
+	top: 50px;
+	left: 300px;
+	display: inline-block;
+	vertical-align: top;
+}	
+
+nav a:hover{
+	color: #FFFFFF;
+	background-color: #5287f3;
+	border-radius: 7px;
+	transition-duration: 0.6s;
+}
+
+
+
+
+
